@@ -13,14 +13,7 @@ def _set_module(model, submodule_key, module):
     for s in sub_tokens:
         cur_mod = getattr(cur_mod, s)
     setattr(cur_mod, tokens[-1], module)
-
-# def _set_module(model, path, new_module):
-#     parent = model
-#     parts = path.split('.')
-#     for p in parts[:-1]:
-#         parent = getattr(parent, p)
-#     setattr(parent, parts[-1], new_module)
-
+    
 def l1_pruning_with_prs_for_mobilenet_v2(model, prs):
     pm = copy.deepcopy(model)
     for n,m in pm.named_modules():
