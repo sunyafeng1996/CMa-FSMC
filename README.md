@@ -19,6 +19,7 @@
 - datetime
 - pytz
 ## 4. Reproduce our results
+Please note that before running our program, you need to move the file **train.txt** to the folder of your ImageNet dataset for few-shot sampling.
 ### (1) Classification
 ```
 python main.py --model resnet34 --num_sample 50 --dataset imagenet --data_root /your/datasets/path/ --target_drf 0.252 --target_drp 0.232 --tag id-1 --seed 2021
